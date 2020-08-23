@@ -5,9 +5,6 @@
 // Lexical scanning
 // Copyright (c) 2019 Warren Toomey, GPL3
 
-// Lexical scanning
-// Copyright (c) 2019 Warren Toomey, GPL3
-
 // Return the position of character c
 // in string s, or -1 if c not found
 static int chrpos(char *s, int c) {
@@ -80,6 +77,7 @@ int scan(struct token *t) {
   // the input character
   switch (c) {
   case EOF:
+    t->token = T_EOF;
     return (0);
   case '+':
     t->token = T_PLUS;
